@@ -3,7 +3,7 @@ Librería de funciones usadas para programación funcional.
 
 ## setNewProperty
 ***Basic***
-```
+```js
 const person = {
 	id: 1, 
 	name: 'Andres',
