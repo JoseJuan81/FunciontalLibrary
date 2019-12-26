@@ -1,2 +1,2 @@
 const round = decimal => value => Number(value.toFixed(decimal));
-module.export.round = round;
+module.exports.round = round;

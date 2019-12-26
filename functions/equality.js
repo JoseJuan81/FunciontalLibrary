@@ -9,4 +9,4 @@ const equality = (...args) => {
 }
 // const people = [{ id: 1, name: 'Noah' }, { id: 2, name; 'Pepe' }, { id: 3, name: 'Luciana' }, { id: 4, name: 'Jose Juan' }];
 // const noah = people.find(equality('name', 'Noah')); --> noah = { id: 1, name: 'Noah' }
-module.export.equality = equality;
+module.exports.equality = equality;

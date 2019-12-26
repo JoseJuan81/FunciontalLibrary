@@ -2,4 +2,4 @@ const returnUniqueArraysItems = (...arrs) => { // retorna los valores unicos ent
 	const res = [].concat(...arrs)
 	return [...new Set(res)];
 }
-module.export.returnUniqueArraysItems = returnUniqueArraysItems;
+module.exports.returnUniqueArraysItems = returnUniqueArraysItems;

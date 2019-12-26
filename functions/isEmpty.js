@@ -10,4 +10,4 @@ const isEmpty = (arg) => {
 	}
 	return !arg;
 }
-module.export.isEmpty = isEmpty;
+module.exports.isEmpty = isEmpty;
