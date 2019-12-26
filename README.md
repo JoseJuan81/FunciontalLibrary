@@ -12,7 +12,7 @@ setNewProperty('age', 69)(person)
 result: person = { id: 1, name: 'Andres', age: 69 }
 ```
 ***in Arrays***
-```
+```js
 const persons = [
 	{ id: 1, name: 'Andres' },
 	{ id: 2, name: 'Ada' },
