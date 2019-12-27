@@ -81,6 +81,40 @@ var b = [
 ];
 commonsItemsBetweenArrays([a, 'name'], [b, 'name']) // [{id: 1, name: 'wen'}, {id: 5, name: 'JJ'}]
 ```
+## compose
+```js
+	var persons = [
+    {id: 1, name: 'wen'},
+    {id: 5, name: 'JJ'},
+    {id: 6, name: 'nene'},
+];
+const newPersons = map(
+	compose(
+		setNewProperty('flagActive', true),
+		setNewProperty('createdAt', new Date()),
+		setNewProperty('code', { id, name } => `${name-id}`),
+	),
+	persons,
+) // [{id: 1, name: 'wen', flagActive: true, createAt: 'fecha de hoy', code: 'wen-1'},
+    // {id: 5, name: 'JJ', flagActive: true, createAt: 'fecha de hoy', code: 'JJ-5'},
+    // {id: 6, name: 'nene', flagActive: true, createAt: 'fecha de hoy', code: 'nene-6'}];
+```
+## createPropertyByOtherOne
+```js
+	var persons = [
+    {id: 1, name: 'wen'},
+    {id: 5, name: 'JJ'},
+    {id: 6, name: 'nene'},
+];
+const newPersons = map(
+	compose(createPropertyByOtherOne('code', 'id')),
+	persons,
+) // [
+    // { id: 1, name: 'wen', code: 1 },
+    // { id: 5, name: 'JJ', code: 5 },
+    // { id: 6, name: 'nene', code: 6 },
+// ]
+```
 ## setNewProperty
 ***Basic***
 ```js
