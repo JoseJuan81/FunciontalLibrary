@@ -1,4 +1,5 @@
-const { getPropertysValue } = require("./getPropertysValue");
+const { getPropertyValue } = require("./getPropertyValue");
+
 const createPropertyByOtherOne = (...args) => {
 	const [prop1, prop2] = args;
 	return function inner(item) {
@@ -8,7 +9,7 @@ const createPropertyByOtherOne = (...args) => {
 		} else {
 			newItem = { ...item };
 		}
-		newItem[prop1] = getPropertysValue(prop2)(newItem);
+		newItem[prop1] = getPropertyValue(prop2)(newItem);
 		return newItem;
 	};
 }

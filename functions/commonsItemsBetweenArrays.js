@@ -6,7 +6,7 @@ const commonsItemsBetweenArrays = (collection1, collection2) => {
 	const [arr2, prop2] = collection2;
 	const lower = arr1.length <= arr2.length ? arr1 : arr2;
     const bigger = lower.length === arr1.length ? arr2 : arr1;
-	const list = [];
+	let list = [];
 	if (prop2) {
 		lower.forEach((a) => {
 			const val = prop1 ? a[prop1] : a;

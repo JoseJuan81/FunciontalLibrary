@@ -115,6 +115,59 @@ const newPersons = map(
     // { id: 6, name: 'nene', code: 6 },
 // ]
 ```
+## equality
+```js
+const a = 2;
+const b = 3;
+equality(a)(b) // false
+
+const personA = {id: 1, name: 'wen'};
+const personB = {id: 2, name: 'JJ'};
+equality('id', 2)(personB) // true
+equality('id', 2)(personA) // false
+```
+
+## getPropertyValue
+```js
+const grandMother = {
+	name: 'ada',
+	age: 69,
+	child: {
+		name: 'jose',
+		age: 38,
+		child: {
+			name: 'juan',
+			age: 11,
+		}
+	}
+}
+const grandChild = getPropertyValue('child.child.name')(grandMother) // 'juan'
+const granMothersName = getPropertyValue('name')(grandMother) // 'ada'
+const grandChildLastname = getPropertyValue('child.child.lastname')(grandMother) // 'undefined'
+
+getPropertyValue('child.lastname.name')(grandMother) // 'undefined'
+getPropertyValue('lastname.child.name')(grandMother) // 'undefined'
+```
+
+## isEmpty
+```js
+const emptyObject = {};
+const fullObject = { age: 24 };
+const emptyArray = [];
+const fullArray = [5];
+const emptyString = '';
+const fullString = 'hola mundo';
+const emptyNumber = 0;
+const fullNumber = 3;
+isEmpty(emptyArray) // true
+isEmpty(fullArray) // false
+isEmpty(emptyObject) // true
+isEmpty(fullObject) // false
+isEmpty(emptyString) // true
+isEmpty(fullString) // false
+isEmpty(emptyNumber) // true
+isEmpty(fullNumber) // false
+```
 ## setNewProperty
 ***Basic***
 ```js

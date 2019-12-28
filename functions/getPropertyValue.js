@@ -1,4 +1,4 @@
-const getDeeper = (...args) => {
+const getPropertyValue = (args) => {
 	const propFlow = args.split('.');
 	return function inner(item) {
 		let newItem = { ...item };
@@ -8,4 +8,4 @@ const getDeeper = (...args) => {
 		return newItem;
 	};
 }
-module.exports.getDeeper = getDeeper;
+module.exports.getPropertyValue = getPropertyValue;
