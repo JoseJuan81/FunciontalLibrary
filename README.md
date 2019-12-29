@@ -1,5 +1,7 @@
 # Functional Library
-Librería de funciones usadas para programación funcional.
+**functional programming functions.**
+
+(Librería de funciones usadas para programación funcional.)
 
 ## Install
 ```code
@@ -87,7 +89,7 @@ this.documents = [
 				},
 ];
 ```
-
+# Functions
 ## allAreTrue
 ```js
 const flag1 = true;
