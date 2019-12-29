@@ -168,6 +168,119 @@ isEmpty(fullString) // false
 isEmpty(emptyNumber) // true
 isEmpty(fullNumber) // false
 ```
+
+## isNotEmpty
+```js
+const emptyObject = {};
+const fullObject = { age: 24 };
+const emptyArray = [];
+const fullArray = [5];
+const emptyString = '';
+const fullString = 'hola mundo';
+const emptyNumber = 0;
+const fullNumber = 3;
+isNotEmpty(emptyArray) // false
+isNotEmpty(fullArray) // true
+isNotEmpty(emptyObject) // false
+isNotEmpty(fullObject) // true
+isNotEmpty(emptyString) // false
+isNotEmpty(fullString) // true
+isNotEmpty(emptyNumber) // false
+isNotEmpty(fullNumber) // true
+```
+##  mergeObjects
+```js
+const car = {
+	brand: 'toyota',
+	model: 'forrunner',
+}
+const driver = {
+	name: 'kaki',
+	age: 33,
+}
+const road = {
+	roadName: 'trolcal 33',
+	long: '433 Km',
+}
+mergerObjects(car, driver, road) // {
+	// roadName: 'trolcal 33',
+	// long: '433 Km',
+	// name: 'kaki',
+	// age: 33,
+	// brand: 'toyota',
+	// model: 'forrunner',
+// }
+```
+## removeItemFromArrayByIndex
+```js
+const persons = [
+	{ id: 1, name: 'kaki' },
+	{ id: 2, name: 'churry' },
+	{ id: 3, name: 'ada' },
+	{ id: 4, name: 'javier' },
+	{ id: 5, name: 'juan' },
+];
+const adaIndex = findIndex(p => p.name === 'ada', persons);
+removeItemFromArrayByIndex(adaIndex, persons)// [
+	// { id: 1, name: 'kaki' },
+	// { id: 2, name: 'churry' },
+	// { id: 4, name: 'javier' },
+	// { id: 5, name: 'juan' },
+]
+```
+## removeItemFromArrayByProp
+```js
+const persons = [
+	{ id: 1, name: 'kaki' },
+	{ id: 2, name: 'churry' },
+	{ id: 3, name: 'ada' },
+	{ id: 4, name: 'javier' },
+	{ id: 5, name: 'juan' },
+];
+removeItemFromArrayByProp('name', 'ada')(persons)// [
+	// { id: 1, name: 'kaki' },
+	// { id: 2, name: 'churry' },
+	// { id: 4, name: 'javier' },
+	// { id: 5, name: 'juan' },
+]
+```
+## returnUniqueArraysItems
+```js
+var a = [
+    {id: 1, name: 'wen'},
+    {id: 2, name: 'are'},
+    {id: 3, name: 'Tony'},
+    {id: 4, name: 'Ada'},
+    {id: 5, name: 'JJ'},
+];
+var b = [
+    {id: 1, name: 'wen'},
+    {id: 5, name: 'JJ'},
+    {id: 6, name: 'nene'},
+];
+var c = [
+	{ id: 2, name: 'are' },
+	{ id: 6, name: 'nene'},
+	{ id: 7, name: 'jaime' },
+]
+returnUniqueArraysItems(a, b, c)// [
+	// {id: 1, name: 'wen'},
+	// {id: 2, name: 'are'},
+	// {id: 3, name: 'Tony'},
+	// {id: 4, name: 'Ada'},
+	// {id: 5, name: 'JJ'},
+	// {id: 6, name: 'nene'},
+	// {id: 7, name: 'jaime'},
+]
+```
+## round
+```js
+const num = 34.456789;
+const twoDecimals = round(2);
+const threeDecimals = round(3)
+twoDecimals(num) // 34.46
+threeDecimals(num) // 34.457
+```
 ## setNewProperty
 ***Basic***
 ```js
