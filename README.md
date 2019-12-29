@@ -1,6 +1,93 @@
 # Functional Library
 Librería de funciones usadas para programación funcional.
 
+## Install
+```code
+npm i functionallibrary
+```
+
+## Use
+import ***functionallibrary*** in your `.js` file
+```js
+import { map, setNewProperty, compose } from 'functionallibrary';
+```
+
+## Vuejs use
+in your `.vue` file
+```js
+<script>
+	import { map, setNewProperty, compose } from 'functionallibrary';
+
+	function updateDocuments() {
+		this.documents = map(
+			compose(
+				setNewProperty('createdAt', new Date()),
+				setNewProperty('customer', this.customer),
+			),
+			this.documents,
+		)
+	}
+
+	function data() {
+		return {
+			customer: {
+				name: 'jhon Doe',
+				id: '00001',
+			},
+			documents: [
+				{
+					id: 1,
+					num: '1234',
+					description: 'new shoes',
+					type: 'sale',
+				},
+				{
+					id: 2,
+					num: '2345',
+					description: 'new t-shirt',
+					type: 'sale',
+				},
+			],
+		},
+	}
+
+	export default {
+		name: 'vue-component',
+		data,
+		methods: {
+			updateDocuments,
+		},
+	}
+</script>
+```
+the `updateDocument` function result:
+```js
+this.documents = [
+	{
+					id: 1,
+					num: '1234',
+					description: 'new shoes',
+					type: 'sale',
+					createdAt: '2019-12-28',
+					customer: {
+						name: 'jhon Doe',
+						id: '00001',
+					},
+				},
+				{
+					id: 2,
+					num: '2345',
+					description: 'new t-shirt',
+					type: 'sale',
+					createdAt: '2019-12-28',
+					customer: {
+						name: 'jhon Doe',
+						id: '00001',
+					},
+				},
+];
+```
+
 ## allAreTrue
 ```js
 const flag1 = true;
