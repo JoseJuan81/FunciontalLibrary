@@ -3,6 +3,8 @@
 
 (Librería de funciones usadas para programación funcional.)
 
+[![Build Status](https://travis-ci.org/JoseJuan81/FunctionalLibrary.svg?branch=dev)](https://travis-ci.org/JoseJuan81/FunctionalLibrary)
+
 ## Install
 ```code
 npm i functionallibrary
