@@ -3,7 +3,14 @@
 
 (Librería de funciones usadas para programación funcional.)
 
-[![Build Status](https://travis-ci.org/JoseJuan81/FunctionalLibrary.svg?branch=dev)](https://travis-ci.org/JoseJuan81/FunctionalLibrary)
+<p align="center">
+	<a href="https://travis-ci.org/JoseJuan81/FunctionalLibrary">
+	  <img src="https://travis-ci.org/JoseJuan81/FunctionalLibrary.svg?branch=dev" alt="Version">
+	</a>
+	<a href="https://www.npmjs.com/package/functionallibrary">
+	  <img src="https://img.shields.io/npm/v/functionallibrary.svg" alt="Version">
+	</a>
+</p>
 
 ## Install
 ```code

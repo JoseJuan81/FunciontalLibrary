@@ -1,6 +1,6 @@
 {
   "name": "functionallibrary",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "funciones a usar en programacion funcional",
   "main": "index.js",
   "scripts": {
