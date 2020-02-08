@@ -10,6 +10,7 @@
 	<a href="https://www.npmjs.com/package/functionallibrary">
 	  <img src="https://img.shields.io/npm/v/functionallibrary.svg" alt="Version">
 	</a>
+	<img alt="GitHub" src="https://img.shields.io/github/license/josejuan81/FunctionalLibrary">
 </p>
 
 ## Install
