@@ -1,9 +1,10 @@
 {
   "name": "functionallibrary",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "funciones a usar en programacion funcional",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
+    "prod": "webpack",
     "test": "node ./test"
   },
   "repository": {
@@ -23,5 +24,11 @@
   "bugs": {
     "url": "https://github.com/JoseJuan81/FunciontalLibrary/issues"
   },
-  "homepage": "https://github.com/JoseJuan81/FunciontalLibrary#readme"
+  "homepage": "https://github.com/JoseJuan81/FunciontalLibrary#readme",
+  "dependencies": {
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  }
 }
