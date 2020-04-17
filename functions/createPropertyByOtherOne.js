@@ -1,4 +1,4 @@
-const { getPropertyValue } = require("./getPropertyValue");
+const { getPropertyValue } = require("./getPropertysValue");
 
 const createPropertyByOtherOne = (...args) => {
 	const [prop1, prop2] = args;

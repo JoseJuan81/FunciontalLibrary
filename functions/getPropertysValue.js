@@ -1,4 +1,4 @@
-const getPropertyValue = (args) => {
+const getPropertysValue = (args) => {
 	const propFlow = args.split('.');
 	return function inner(item) {
 		let newItem = { ...item };
@@ -8,4 +8,4 @@ const getPropertyValue = (args) => {
 		return newItem;
 	};
 }
-module.exports.getPropertyValue = getPropertyValue;
+module.exports.getPropertysValue = getPropertysValue;
