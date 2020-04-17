@@ -226,7 +226,7 @@ equality('id', 2)(personB) // true
 equality('id', 2)(personA) // false
 ```
 
-## getPropertyValue
+## getPropertysValue
 ```js
 const grandMother = {
 	name: 'ada',
@@ -240,9 +240,9 @@ const grandMother = {
 		}
 	}
 }
-const grandChild = getPropertyValue('child.child.name')(grandMother) // 'juan'
-const granMothersName = getPropertyValue('name')(grandMother) // 'ada'
-const grandChildLastname = getPropertyValue('child.child.lastname')(grandMother) // 'undefined'
+const grandChild = getPropertysValue('child.child.name')(grandMother) // 'juan'
+const granMothersName = getPropertysValue('name')(grandMother) // 'ada'
+const grandChildLastname = getPropertysValue('child.child.lastname')(grandMother) // 'undefined'
 
 getPropertyValue('child.lastname.name')(grandMother) // 'undefined'
 getPropertyValue('lastname.child.name')(grandMother) // 'undefined'

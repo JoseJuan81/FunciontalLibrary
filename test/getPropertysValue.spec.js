@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
-const { getPropertyValue } = require('../functions/getPropertyValue');
+const { getPropertysValue } = require('../functions/getPropertysValue');
 
-console.log('test on "getPropertyValue function: "')
+console.log('test on "getPropertysValue function: "')
 const mother = {
 	name: 'ada',
 	age: 69,
@@ -15,13 +15,13 @@ const mother = {
 	}
 }
 
-const grandChild = getPropertyValue('child.child.name')(mother);
+const grandChild = getPropertysValue('child.child.name')(mother);
 assert.deepEqual(
 	grandChild,
 	'juan',
 	'No es el mismo nombre',
 );
-const grandMothersName = getPropertyValue('name')(mother);
+const grandMothersName = getPropertysValue('name')(mother);
 assert.deepEqual(
 	grandMothersName,
 	'ada',
