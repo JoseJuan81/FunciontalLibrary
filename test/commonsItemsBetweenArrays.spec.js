@@ -18,9 +18,58 @@ var commons = [
 	{id: 1, name: 'wen'},
     {id: 5, name: 'JJ'},
 ];
+
 assert.deepEqual(
-	commons,
-	commonsItemsBetweenArrays([a, 'name'], [b, 'name']),
-	'No son iguales los items comunes',
+    commons,
+	commonsItemsBetweenArrays('name', a, b),
+    'No son iguales los items comunes',
 );
-console.log('==> commonsItemsBetweenArrays functino Ok!');
+var c = "necesitounacadenadetextolargaparaestaprueba".split('');
+var d = "necesitootracadenadetextolargaparaconstrastarlaanterior".split('');
+assert.deepEqual(
+    [
+        'n',
+        'e',
+        'c',
+        'e',
+        's',
+        'i',
+        't',
+        'o',
+        'n',
+        'a',
+        'c',
+        'a',
+        'd',
+        'e',
+        'n',
+        'a',
+        'd',
+        'e',
+        't',
+        'e',
+        'x',
+        't',
+        'o',
+        'l',
+        'a',
+        'r',
+        'g',
+        'a',
+        'p',
+        'a',
+        'r',
+        'a',
+        'e',
+        's',
+        't',
+        'a',
+        'p',
+        'r',
+        'e',
+        'a',
+    ],
+    commonsItemsBetweenArrays(null, c, d),
+    'No son iguales los números comunes',
+)
+console.log('==> commonsItemsBetweenArrays function Ok!');

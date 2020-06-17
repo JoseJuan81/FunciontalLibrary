@@ -40,4 +40,30 @@ assert.deepEqual(
 	],
 	'Los arreglos de objetos no son iguales',
 );
+
+var h = "necesitounacadenadetextolargaparaestaprueba".split('');
+var g = "necesitootracadenadetextolargaparaconstrastarlaanterior".split('');
+
+assert.deepEqual(
+	[ 
+		'n',
+		'e',
+		'c',
+		's',
+		'i',
+		't',
+		'o',
+		'u',
+		'a',
+		'd',
+		'x',
+		'l',
+		'r',
+		'g',
+		'p',
+		'b',
+	],
+	returnUniqueArraysItems(h, g),
+	'No son únicos los elementos',
+);
 console.log('==> returnUniqueArraysItems function Ok!')

@@ -7,6 +7,4 @@ const equality = (...args) => {
 		return typeof item === 'object' ? item[prop1] === prop2 : item === prop1;
 	};
 }
-// const people = [{ id: 1, name: 'Noah' }, { id: 2, name; 'Pepe' }, { id: 3, name: 'Luciana' }, { id: 4, name: 'Jose Juan' }];
-// const noah = people.find(equality('name', 'Noah')); --> noah = { id: 1, name: 'Noah' }
 module.exports.equality = equality;

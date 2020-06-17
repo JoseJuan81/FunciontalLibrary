@@ -18,6 +18,33 @@
 npm i functionallibrary
 ```
 
+## Summary
+	allAreTrue,
+	atLeastOneTrue,
+	commonsItemsBetweenArrays,
+	compose,
+	createPropertyByOtherOne: curry(createPropertyByOtherOne),
+	debounce,
+	equality,
+	every: curry(every),
+	filter: curry(filter),
+	find: curry(find),
+	findIndex: curry(findIndex),
+	forEach: curry(forEach),
+	getPropertysValue: curry(getPropertysValue),
+	identity: curry(identity),
+	isEmpty,
+	isNotEmpty,
+	map: curry(map),
+	mergeObjects,
+	reduce: curry(reduce),
+	removeItemFromArrayByIndex: curry(removeItemFromArrayByIndex),
+	removeItemFromArrayByProp: curry(removeItemFromArrayByProp),
+	returnUniqueArraysItems,
+	round: curry(round),
+	setNewProperty,
+	some: curry(some),
+
 ## Use
 import ***functionallibrary*** in your `.js` file
 ```js
@@ -125,14 +152,14 @@ allAreTrue(flag1, a, n); // false
 	every(allTrue, arr) // true
 
 	const arr = [1, 3, 5, 'a', 10];
-	const number = (n) => typeof n === 'number';
-	const allNumbers = every(number, arr) // false
+	const isNumber = (n) => typeof n === 'number';
+	const allNumbers = every(isNumber, arr) // false
 ```
 ***filter***
 ```js
 	const arr = [1, 3, 5, 8, 10, 12];
 	const moreThan5 = (v) => v > 5;
-	const item = filter(moreThan5, arr) // 5
+	const item = filter(moreThan5, arr) // [8, 10, 12]
 ```
 ***find***
 ```js
@@ -185,7 +212,7 @@ atLeastOneTrue(flag1, a, n); // false
 ```js
 const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const b = [5, 6, 7, 8, 9, 10];
-commonsIntemsBetweenArrays([a], [b]); // [5, 6, 7, 8, 9]
+commonsItemsBetweenArrays(null, a, b); // [5, 6, 7, 8, 9]
 ```
 ```js
 var a = [
@@ -200,7 +227,7 @@ var b = [
     {id: 5, name: 'JJ'},
     {id: 6, name: 'nene'},
 ];
-commonsItemsBetweenArrays([a, 'name'], [b, 'name']) // [{id: 1, name: 'wen'}, {id: 5, name: 'JJ'}]
+commonsItemsBetweenArrays('name', a, b) // [{id: 1, name: 'wen'}, {id: 5, name: 'JJ'}]
 ```
 ## compose
 ```js
@@ -221,6 +248,7 @@ const newPersons = map(
     // {id: 6, name: 'nene', flagActive: true, createAt: 'fecha de hoy', code: 'nene-6'}];
 ```
 ## createPropertyByOtherOne
+> create `code` using `id` value;
 ```js
 	var persons = [
     {id: 1, name: 'wen'},
@@ -262,12 +290,12 @@ const grandMother = {
 		}
 	}
 }
-const grandChild = getPropertysValue('child.child.name')(grandMother) // 'juan'
-const granMothersName = getPropertysValue('name')(grandMother) // 'ada'
-const grandChildLastname = getPropertysValue('child.child.lastname')(grandMother) // 'undefined'
+const grandChild = getPropertysValue('child.child.name', grandMother) // 'juan'
+const granMothersName = getPropertysValue('name', grandMother) // 'ada'
+const grandChildLastname = getPropertysValue('child.child.lastname', grandMother) // 'undefined'
 
-getPropertyValue('child.lastname.name')(grandMother) // 'undefined'
-getPropertyValue('lastname.child.name')(grandMother) // 'undefined'
+getPropertyValue('child.lastname.name', grandMother) // 'undefined'
+getPropertyValue('lastname.child.name', grandMother) // 'undefined'
 ```
 
 ## isEmpty
@@ -331,6 +359,21 @@ mergerObjects(car, driver, road) // {
 	// brand: 'toyota',
 	// model: 'forrunner',
 // }
+
+const p1 = {
+	name: 'jose',
+}
+const p2 = {
+	name: 'juan',
+	age: 28,
+}
+const p3 = {
+	name: 'Andres',
+	age: 40,
+	children: true,
+}
+mergeObjects(props1, props2, props3) // { name: 'Andres', age: 40, children: true }
+mergeObjects(props3, props2, props1) // { name: 'jose', age: 28, children: true }
 ```
 ## removeItemFromArrayByIndex
 ```js
@@ -445,4 +488,15 @@ const getAge = getPropertysValue('age');
 const existAnyBodyBiggerThan30 = some(compose(biggerThan30, getAge));
 const anyBodyBiggerThan30InPersons = existAnyBodyBiggerThan30(persons); // true
 const anyBodyBiggerThan30InStudents = existAnyBodyBiggerThan30(students); // false
+```
+## Identity
+```js
+const five = 5;
+identity(five) // 5
+
+const arr = [1, 2];
+identity(arr) // [1, 2]
+
+const obj = { id: 1, code: 'abc' };
+identity(obj) // { id: 1, code: 'abc' }
 ```

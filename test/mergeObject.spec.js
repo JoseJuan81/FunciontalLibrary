@@ -28,4 +28,27 @@ assert.deepEqual(
 	expexted,
 	'Los Objetos no son iguales',
 );
+
+const props1 = {
+	name: 'jose',
+}
+const props2 = {
+	name: 'juan',
+	age: 28,
+}
+const props3 = {
+	name: 'Andres',
+	age: 40,
+	children: true,
+}
+assert.deepEqual(
+	{ name: 'Andres', age: 40, children: true },
+	mergeObjects(props1, props2, props3),
+	'Mezclando personas #1',
+);
+assert.deepEqual(
+	{ name: 'jose', age: 28, children: true },
+	mergeObjects(props3, props2, props1),
+	'Mezclando personas #2',
+);
 console.log('==> mergeObjects function Ok!!')

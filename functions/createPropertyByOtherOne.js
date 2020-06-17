@@ -1,16 +1,9 @@
 const { getPropertysValue } = require("./getPropertysValue");
+const { setNewProperty } = require("./setNewProperty");
 
-const createPropertyByOtherOne = (...args) => {
-	const [prop1, prop2] = args;
-	return function inner(item) {
-		let newItem = null;
-		if (item.length) {
-			[newItem] = item;
-		} else {
-			newItem = { ...item };
-		}
-		newItem[prop1] = getPropertysValue(prop2)(newItem);
-		return newItem;
-	};
+const createPropertyByOtherOne = (prop1, prop2, obj) => {
+	const getVal = getPropertysValue(prop2, obj);
+	const setValIn = setNewProperty(prop1, getVal);
+	return setValIn(obj);
 }
 module.exports.createPropertyByOtherOne = createPropertyByOtherOne;
