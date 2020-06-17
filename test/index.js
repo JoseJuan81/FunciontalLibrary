@@ -14,3 +14,4 @@ const removeItemFromArrayByProp = require('./removeItemFromArrayByProp.spec');
 const returnUniqueArraysItems = require('./returnUniqueArraysItems.spec');
 const round = require('./round.spec');
 const examples = require('./examples.spec');
+require('./curry.spec');

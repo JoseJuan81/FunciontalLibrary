@@ -1,6 +1,6 @@
 {
   "name": "functionallibrary",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "funciones a usar en programacion funcional",
   "main": "dist/functionallibrary.umd.js",
   "scripts": {
@@ -18,7 +18,9 @@
     "point",
     "free",
     "pure",
-    "functions"
+    "functions",
+    "curry",
+    "compose"
   ],
   "author": "josejuan81",
   "license": "MIT",
@@ -28,7 +30,8 @@
   "homepage": "https://github.com/JoseJuan81/FunciontalLibrary#readme",
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "@rollup/plugin-commonjs": "^11.1.0"
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "rollup": "^2.16.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

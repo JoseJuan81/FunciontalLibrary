@@ -1,7 +1,5 @@
 const assert = require('assert').strict;
-const { createPropertyByOtherOne } = require('./../functions/createPropertyByOtherOne');
-const { map } = require('./../functions/arrayPrototypes');
-const {compose } = require('./../functions/compose');
+const { createPropertyByOtherOne, compose, map } = require('./../wrapper');
 
 console.log('test on "createPropertyByOtherOne function: "');
 var persons = [

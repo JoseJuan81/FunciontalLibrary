@@ -1,6 +1,5 @@
 const assert = require('assert').strict;
-const { findIndex } = require('./../functions/arrayPrototypes');
-const { removeItemFromArrayByIndex } = require('../functions/removeItemFromArrayByIndex');
+const { findIndex, removeItemFromArrayByIndex } = require('./../wrapper');
 
 console.log('test on "removeItemFromArrayByIndex function: "')
 

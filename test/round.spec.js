@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { round } = require('./../functions/round');
+const { round } = require('./../wrapper');
 
 console.log('test on "round function: "');
 const num = 34.45678;

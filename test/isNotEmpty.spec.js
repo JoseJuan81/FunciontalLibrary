@@ -1,6 +1,5 @@
 const assert = require('assert').strict;
-const { isEmpty } = require('../functions/isEmpty');
-const { isNotEmpty } = require('./../functions/isNotEmpty');
+const { isNotEmpty } = require('./../wrapper');
 
 console.log('test on "isNotEmpty function: "')
 

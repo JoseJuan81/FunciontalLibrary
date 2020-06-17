@@ -118,6 +118,22 @@ const n = 4;
 allAreTrue(flag1, a, n); // false
 ```
 ## arrayPrototypes
+***every***
+```js
+	const arr = [true, true, true, true];
+	const allTrue = (v) => !!v;
+	every(allTrue, arr) // true
+
+	const arr = [1, 3, 5, 'a', 10];
+	const number = (n) => typeof n === 'number';
+	const allNumbers = every(number, arr) // false
+```
+***filter***
+```js
+	const arr = [1, 3, 5, 8, 10, 12];
+	const moreThan5 = (v) => v > 5;
+	const item = filter(moreThan5, arr) // 5
+```
 ***find***
 ```js
 	const arr = [1, 3, 5];
@@ -140,7 +156,13 @@ allAreTrue(flag1, a, n); // false
 ```js
 	const arr = [1, 3, 5];
 	const total = (acc, v) => acc + v;
-	const totalAmount = reduce(total, arr, 0) // 9
+	const totalAmount = reduce(total, 0, arr) // 9
+```
+***some***
+```js
+	const arr = [1, 3, 5, 'a', 10];
+	const letter = (n) => typeof n === 'string';
+	const anyLetter = some(letter, arr) // true
 ```
 ## atLeastOneTrue
 ```js
@@ -402,4 +424,25 @@ persons = [
 	{ id: 1, name: 'Andres', age: 69 },
 	{ id: 2, name: 'Ada', age: 69 },
 ];
+```
+
+## currying
+```js
+const persons = [
+	{ id: 1, name: 'kaki', age: 33 },
+	{ id: 2, name: 'jj', age: 38 },
+	{ id: 3, name: 'churry', age: 11 },
+	{ id: 4, name: 'nene', age: 6 },
+];
+const students = [
+	{ id: 1, name: 'kaki', age: 13 },
+	{ id: 2, name: 'jj', age: 18 },
+	{ id: 3, name: 'churry', age: 11 },
+	{ id: 4, name: 'nene', age: 6 },
+];
+const biggerThan30 = v => v > 30;
+const getAge = getPropertysValue('age');
+const existAnyBodyBiggerThan30 = some(compose(biggerThan30, getAge));
+const anyBodyBiggerThan30InPersons = existAnyBodyBiggerThan30(persons); // true
+const anyBodyBiggerThan30InStudents = existAnyBodyBiggerThan30(students); // false
 ```

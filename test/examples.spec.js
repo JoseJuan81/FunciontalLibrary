@@ -1,7 +1,5 @@
 const assert = require('assert').strict;
-const { map } = require('./../functions/arrayPrototypes');
-const { compose } = require('./../functions/compose');
-const { setNewProperty } = require('./../functions/setNewProperty');
+const { compose, map, setNewProperty } = require('./../wrapper');
 
 console.log('testing examples');
 const customer = {

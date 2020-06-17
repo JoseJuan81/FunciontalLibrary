@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { atLeastOneTrue } = require('./../functions/atLeastOneTrue');
+const { atLeastOneTrue } = require('./../wrapper');
 
 console.log('test on "atLeastOneTrue function: "')
 let flag1 = true;

@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { removeItemFromArrayByProp } = require('../functions/removeItemFromArrayByProp');
+const { removeItemFromArrayByProp } = require('./../wrapper');
 
 console.log('test on "removeItemFromArrayByProp function: "')
 

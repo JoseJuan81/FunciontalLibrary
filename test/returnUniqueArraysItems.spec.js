@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { returnUniqueArraysItems } = require('./../functions/returnUniqueArraysItems');
+const { returnUniqueArraysItems } = require('./../wrapper');
 
 console.log('test on "returnUniqueArraysItems function: "');
 const arr1 = [1, 2, 3, 4, 5];

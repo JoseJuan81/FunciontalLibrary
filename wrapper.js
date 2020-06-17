@@ -1,5 +1,5 @@
 const { allAreTrue } = require("./functions/allAreTrue");
-const { find, findIndex, forEach, map, reduce } = require("./functions/arrayPrototypes");
+const { every, filter, find, findIndex, forEach, map, reduce, some } = require("./functions/arrayPrototypes");
 const { atLeastOneTrue } = require("./functions/atLeastOneTrue");
 const { commonsItemsBetweenArrays } = require("./functions/commonsItemsBetweenArrays");
 const { compose } = require("./functions/compose");
@@ -15,27 +15,31 @@ const { removeItemFromArrayByProp } = require("./functions/removeItemFromArrayBy
 const { returnUniqueArraysItems } = require("./functions/returnUniqueArraysItems");
 const { round } = require("./functions/round");
 const { setNewProperty } = require("./functions/setNewProperty");
+const { curry } = require("./functions/curry");
 
 module.exports = {
 	allAreTrue,
 	atLeastOneTrue,
-	commonsItemsBetweenArrays,
+	commonsItemsBetweenArrays: curry(commonsItemsBetweenArrays),
 	compose,
-	createPropertyByOtherOne,
+	createPropertyByOtherOne: curry(createPropertyByOtherOne),
 	debounce,
 	equality,
-	find,
-	findIndex,
-	forEach,
+	every: curry(every),
+	filter: curry(filter),
+	find: curry(find),
+	findIndex: curry(findIndex),
+	forEach: curry(forEach),
 	getPropertysValue,
 	isEmpty,
 	isNotEmpty,
-	map,
+	map: curry(map),
 	mergeObjects,
-	reduce,
-	removeItemFromArrayByIndex,
-	removeItemFromArrayByProp,
+	reduce: curry(reduce),
+	removeItemFromArrayByIndex: curry(removeItemFromArrayByIndex),
+	removeItemFromArrayByProp: curry(removeItemFromArrayByProp),
 	returnUniqueArraysItems,
-	round,
+	round: curry(round),
 	setNewProperty,
+	some: curry(some),
 };

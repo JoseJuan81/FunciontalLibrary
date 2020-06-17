@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { getPropertysValue } = require('../functions/getPropertysValue');
+const { getPropertysValue } = require('./../wrapper');
 
 console.log('test on "getPropertysValue function: "')
 const mother = {

@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { equality } = require('./../functions/equality');
+const { equality } = require('./../wrapper');
 
 console.log('test on "equality function: "')
 let a = 2;
