@@ -24,6 +24,7 @@ npm i functionallibrary
 	commonsItemsBetweenArrays,
 	compose,
 	createPropertyByOtherOne: curry(createPropertyByOtherOne),
+	curry,
 	debounce,
 	equality,
 	every: curry(every),
