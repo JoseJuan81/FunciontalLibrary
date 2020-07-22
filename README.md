@@ -11,6 +11,7 @@
 	  <img src="https://img.shields.io/npm/v/functionallibrary.svg" alt="Version">
 	</a>
 	<img alt="GitHub" src="https://img.shields.io/github/license/josejuan81/FunctionalLibrary">
+	<img alt="GitHub" src="https://img.shields.io/npm/dm/functionallibrary">
 </p>
 
 ## Install
