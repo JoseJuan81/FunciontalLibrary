@@ -15,7 +15,7 @@ const students = [
 	{ id: 4, name: 'nene', age: 6 },
 ];
 
-console.log('pruebas en curry');
+console.log('Pruebas en curry');
 const biggerThan30 = v => v > 30;
 const getAge = getPropertysValue('age');
 const existAnyBodyBiggerThan30 = some(compose(biggerThan30, getAge));

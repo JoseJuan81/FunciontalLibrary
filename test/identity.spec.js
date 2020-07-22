@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { identity } = require('./../wrapper');
 
-console.log('==> Probando Identity');
+console.log('Pruebas en Identity');
 assert.deepEqual(
     5,
     identity(5),

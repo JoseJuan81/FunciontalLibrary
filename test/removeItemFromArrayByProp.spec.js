@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { removeItemFromArrayByProp } = require('./../wrapper');
 
-console.log('test on "removeItemFromArrayByProp function: "')
+console.log('Pruebas en "removeItemFromArrayByProp function: "')
 
 const persons = [
 	{ id: 1, name: 'kaki' },

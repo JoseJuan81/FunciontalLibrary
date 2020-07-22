@@ -26,6 +26,7 @@ npm i functionallibrary
 	createPropertyByOtherOne: curry(createPropertyByOtherOne),
 	curry,
 	debounce,
+	decide: curry(decide),
 	equality,
 	every: curry(every),
 	filter: curry(filter),
@@ -500,4 +501,22 @@ identity(arr) // [1, 2]
 
 const obj = { id: 1, code: 'abc' };
 identity(obj) // { id: 1, code: 'abc' }
+```
+
+## Decide
+```js
+const list = [
+    { id:1, name: 'Pedro' },
+    { id:2, name: 'Anyela' },
+    { id:3, name: 'Arelis' },
+    { id:4, name: 'Tony' },
+];
+const setAge = setNewProperty('age', 30);
+const isTony = equality('id', 4);
+const addAgeToTony = decide(isTony, setAge, identity);
+const updatedList = map(addAgeToTony, list);
+// { id:1, name: 'Pedro' },
+// { id:2, name: 'Anyela' },
+// { id:3, name: 'Arelis' },
+// { id:4, name: 'Tony', age: 30 },
 ```

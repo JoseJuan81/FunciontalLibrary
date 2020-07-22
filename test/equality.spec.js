@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { equality } = require('./../wrapper');
 
-console.log('test on "equality function: "')
+console.log('Pruebas en "equality function: "')
 let a = 2;
 let b = 3;
 assert.deepEqual(

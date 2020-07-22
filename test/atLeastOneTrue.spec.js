@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { atLeastOneTrue } = require('./../wrapper');
 
-console.log('test on "atLeastOneTrue function: "')
+console.log('Pruebas en "atLeastOneTrue function: "')
 let flag1 = true;
 let a = 'string';
 let n = 10;

@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { isEmpty } = require('./../wrapper');
 
-console.log('test on "isEmpty function: "')
+console.log('Pruebas en "isEmpty function: "')
 
 const emptyObject = {};
 const fullObject = { age: 24 };

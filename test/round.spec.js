@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { round } = require('./../wrapper');
 
-console.log('test on "round function: "');
+console.log('Prueba "round function: "');
 const num = 34.45678;
 const twoDecimals = round(2);
 assert.deepEqual(

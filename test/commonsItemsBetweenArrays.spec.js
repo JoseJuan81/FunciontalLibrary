@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { commonsItemsBetweenArrays } = require('./../wrapper');
 
-console.log('test on "commonsItemsBetweenArrays function: "')
+console.log('Pruebas en "commonsItemsBetweenArrays function: "')
 var a = [
     {id: 1, name: 'wen'},
     {id: 2, name: 'are'},

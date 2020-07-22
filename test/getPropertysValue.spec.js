@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { getPropertysValue } = require('./../wrapper');
 
-console.log('test on "getPropertysValue function: "')
+console.log('Pruebas en "getPropertysValue function: "')
 const mother = {
 	name: 'ada',
 	age: 69,

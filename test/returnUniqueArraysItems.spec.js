@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { returnUniqueArraysItems } = require('./../wrapper');
 
-console.log('test on "returnUniqueArraysItems function: "');
+console.log('Pruebas en "returnUniqueArraysItems function: "');
 const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [3, 4, 5, 6, 7];
 assert.deepEqual(

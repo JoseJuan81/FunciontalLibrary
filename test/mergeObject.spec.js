@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { mergeObjects } = require('./../wrapper');
 
-console.log('test on "mergeObjects function: "')
+console.log('Pruebas en "mergeObjects function: "')
 
 const car = {
 	brand: 'toyota',

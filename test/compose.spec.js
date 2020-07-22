@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { compose, setNewProperty, map } = require('./../wrapper');
 
-console.log('test on "compose function: "')
+console.log('Pruebas en "compose function: "')
 var persons = [
     {id: 1, name: 'wen'},
     {id: 5, name: 'JJ'},

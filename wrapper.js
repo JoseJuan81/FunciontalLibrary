@@ -6,6 +6,7 @@ const { compose } = require("./functions/compose");
 const { createPropertyByOtherOne } = require("./functions/createPropertyByOtherOne");
 const { curry } = require("./functions/curry");
 const { debounce } = require("./functions/debounce");
+const { decide } = require("./functions/decide");
 const { equality } = require("./functions/equality");
 const { getPropertysValue } = require("./functions/getPropertysValue");
 const { identity } = require('./functions/identity');
@@ -26,6 +27,7 @@ module.exports = {
 	createPropertyByOtherOne: curry(createPropertyByOtherOne),
 	curry,
 	debounce,
+	decide: curry(decide),
 	equality,
 	every: curry(every),
 	filter: curry(filter),
@@ -43,6 +45,6 @@ module.exports = {
 	removeItemFromArrayByProp: curry(removeItemFromArrayByProp),
 	returnUniqueArraysItems,
 	round: curry(round),
-	setNewProperty,
+	setNewProperty: curry(setNewProperty),
 	some: curry(some),
 };

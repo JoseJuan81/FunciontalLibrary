@@ -16,3 +16,4 @@ require('./round.spec');
 require('./examples.spec');
 require('./curry.spec');
 require('./identity.spec');
+require('./decide.spec');

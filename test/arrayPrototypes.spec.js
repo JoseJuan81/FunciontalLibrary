@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { every, filter, find, findIndex, map, reduce, some } = require('./../wrapper');
 
-console.log('test on "arrayPrototypes function: "')
+console.log('Pruebas en "arrayPrototypes function: "')
 const persons = [
 	{ id: 1, name: 'kaki', age: 33 },
 	{ id: 2, name: 'jj', age: 38 },

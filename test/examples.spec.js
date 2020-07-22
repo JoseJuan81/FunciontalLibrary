@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { compose, map, setNewProperty } = require('./../wrapper');
 
-console.log('testing examples');
+console.log('Prueba en examples');
 const customer = {
 	name: 'jhon Doe',
 	id: '00001',
@@ -62,4 +62,4 @@ assert.deepEqual(
 	],
 	'Los documentos no son iguales',
 );
-console.log('examples Ok!')
+console.log('==> examples Ok!')

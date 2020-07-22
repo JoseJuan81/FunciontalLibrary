@@ -1,7 +1,7 @@
 const assert = require('assert').strict;
 const { createPropertyByOtherOne, compose, map } = require('./../wrapper');
 
-console.log('test on "createPropertyByOtherOne function: "');
+console.log('Pruebas en "createPropertyByOtherOne function: "');
 var persons = [
     {id: 1, name: 'wen'},
     {id: 5, name: 'JJ'},
