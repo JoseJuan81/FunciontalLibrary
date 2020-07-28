@@ -1,6 +1,6 @@
 {
   "name": "functionallibrary",
-  "version": "2.0.7",
+  "version": "2.0.9",
   "description": "funciones a usar en programacion funcional",
   "main": "lib/functionallibrary.umd.js",
   "scripts": {

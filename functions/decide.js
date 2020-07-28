@@ -7,7 +7,6 @@
  */
 const decide = (c, f, g, i) => {
     const conditional = typeof c === 'function' ? c(i) : c;
-    console.log('item', i, conditional);
     return conditional ? f(i) : typeof g === 'function' ? g(i) : g;
 };
 
