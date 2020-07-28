@@ -453,7 +453,7 @@ const person = {
 	id: 1, 
 	name: 'Andres',
 };
-setNewProperty('age', 69)(person)
+setNewProperty('age', 69, person)
 result: person = { id: 1, name: 'Andres', age: 69 }
 ```
 ***in Arrays***
@@ -503,6 +503,16 @@ identity(obj) // { id: 1, code: 'abc' }
 ```
 
 ## Decide
+```js
+/**
+ * 
+ * @param { function | Boolean } c - Condicional. Decide cuál función ejecutar
+ * @param { function } f - Función a ejecutar si "c" es verdadero
+ * @param { function | any } g - Función a ejecutar si "c" es falso. Si no es función, es retornado tal cual.
+ * @param { object } i - Objeto que es argumento de todas las funciones anteriores
+ */
+decide(c, f, g, i)
+```
 ```js
 const list = [
     { id:1, name: 'Pedro' },
