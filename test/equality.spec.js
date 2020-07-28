@@ -19,7 +19,6 @@ assert.deepEqual(
 );
 console.log('==> equality function Ok!');
 
-let personA = {id: 1, name: 'wen'};
 let personB = {id: 2, name: 'JJ'};
 assert.deepEqual(
 	equality('id', 2, personB),
@@ -32,5 +31,21 @@ assert.deepEqual(
 	equality('id', 1, personB),
 	false,
 	'Existe igualdad',
+);
+console.log('==> equality function Ok!');
+
+const Abuelo = {
+	name: 'Andres',
+	children: {
+		name: 'Jose Juan',
+		children: {
+			name: 'Noah'
+		}
+	}
+}
+assert.deepEqual(
+	true,
+	equality('children.children.name', 'Noah', Abuelo),
+	'Error en la igualdad children.children.name con Noah',
 );
 console.log('==> equality function Ok!');

@@ -267,16 +267,36 @@ const newPersons = map(
 ```
 ## equality
 ```js
+/**
+ * @param {string, number} prop - propiedad a usar para comparar
+ * @param {string, number} val - valor a comprar cuando se usa un item del tipo objeto
+ * @param {object, string, number} item - cuando es un objeto se usa con val2, cuando es string o number se usa solo (val2 === null)
+ */
+equality(prop, val, item);
+```
+```js
 const a = 2;
 const b = 3;
-equality(a)(b) // false
+equality(a, null, b) // false
 
 const personA = {id: 1, name: 'wen'};
 const personB = {id: 2, name: 'JJ'};
-equality('id', 2)(personB) // true
-equality('id', 2)(personA) // false
+equality('id', 2, personB) // true
+equality('id', 2, personA) // false
 ```
-
+```js
+const Abuelo = {
+	name: 'Andres',
+	children: {
+		name: 'Jose Juan',
+		children: {
+			name: 'Noah'
+		}
+	}
+}
+equality('children.children.name', 'Noah', Abuelo)
+// true
+```
 ## getPropertysValue
 ```js
 const grandMother = {
