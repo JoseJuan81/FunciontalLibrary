@@ -1,11 +1,11 @@
 {
   "name": "functionallibrary",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "funciones a usar en programacion funcional",
-  "main": "dist/functionallibrary.umd.js",
+  "main": "lib/functionallibrary.umd.js",
   "scripts": {
     "build": "npm run build:umd",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/functionallibrary.umd.js",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file lib/functionallibrary.umd.js",
     "test": "node ./test"
   },
   "repository": {

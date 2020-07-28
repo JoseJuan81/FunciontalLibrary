@@ -61,13 +61,11 @@ in your `.vue` file
 	import { map, setNewProperty, compose } from 'functionallibrary';
 
 	function updateDocuments() {
-		this.documents = map(
-			compose(
-				setNewProperty('createdAt', new Date()),
-				setNewProperty('customer', this.customer),
-			),
-			this.documents,
-		)
+		const setCreateAt = setNewProperty('createdAt', new Date());
+		const setCustomer = setNewProperty('customer', this.customer);
+		const updatingPropsInDocuments = compose(setCreateAt, setCustomer);
+		const update = map(updatingPropsInDocuments);
+		this.documents = update(this.documents);
 	}
 
 	function data() {
@@ -520,4 +518,16 @@ const updatedList = map(addAgeToTony, list);
 // { id:2, name: 'Anyela' },
 // { id:3, name: 'Arelis' },
 // { id:4, name: 'Tony', age: 30 },
+```
+
+```js
+const list2 = [
+    { id:1, name: 'TOny', age: 2 },
+    { id:2, name: 'Tony', age: 12 },
+    { id:3, name: 'Tony', age: 20 },
+    { id:4, name: 'Tony', age: 30 },
+];
+const is30 = equality('age', 30);
+const findTonyIndex = decide(isTony, is30, false);
+const tonyIndex = findIndex(findTonyIndex, list2); // tonyIndex = 3
 ```

@@ -28,7 +28,7 @@ module.exports = {
 	curry,
 	debounce,
 	decide: curry(decide),
-	equality,
+	equality: curry(equality),
 	every: curry(every),
 	filter: curry(filter),
 	find: curry(find),
