@@ -1,4 +1,3 @@
-const { isEmpty } = require("./isEmpty");
+import { isEmpty } from "./isEmpty";
 
-const isNotEmpty = arg => !isEmpty(arg);
-module.exports.isNotEmpty = isNotEmpty;
+export const isNotEmpty = arg => !isEmpty(arg);

@@ -1,8 +1,7 @@
-const { findIndex } = require('./arrayPrototypes');
-const { removeItemFromArrayByIndex } = require('./removeItemFromArrayByIndex');
+import { findIndex } from './arrayPrototypes';
+import { removeItemFromArrayByIndex } from './removeItemFromArrayByIndex';
 
-const removeItemFromArrayByProp = (prop, val, arr) => {
+export const removeItemFromArrayByProp = (prop, val, arr) => {
 	const index = findIndex(a => a[prop] === val, arr);
 	return removeItemFromArrayByIndex(index, arr);
 };
-module.exports.removeItemFromArrayByProp = removeItemFromArrayByProp;

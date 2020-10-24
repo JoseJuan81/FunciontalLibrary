@@ -5,9 +5,7 @@
  * @param { function | any } g - Función a ejecutar si "c" es falso. Si no es función, es retornado tal cual.
  * @param { object } i - Objeto que es argumento de todas las funciones anteriores
  */
-const decide = (c, f, g, i) => {
+export const decide = (c, f, g, i) => {
     const conditional = typeof c === 'function' ? c(i) : c;
     return conditional ? f(i) : typeof g === 'function' ? g(i) : g;
 };
-
-module.exports.decide = decide;

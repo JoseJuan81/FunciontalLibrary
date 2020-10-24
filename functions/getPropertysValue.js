@@ -1,4 +1,4 @@
-const getPropertysValue = (nestedProp, obj) => {
+export const getPropertysValue = (nestedProp, obj) => {
 	const propFlow = nestedProp.split('.');
 	let newItem = { ...obj };
 	propFlow.forEach((el) => {
@@ -6,4 +6,3 @@ const getPropertysValue = (nestedProp, obj) => {
 	});
 	return newItem;
 }
-module.exports.getPropertysValue = getPropertysValue;

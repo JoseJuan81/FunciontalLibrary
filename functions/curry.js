@@ -1,4 +1,4 @@
-const curry = (fn) => {
+export const curry = (fn) => {
     const arity = fn.length;
     return function $curry(...args) {
         if (args.length < arity) {
@@ -7,5 +7,4 @@ const curry = (fn) => {
         return fn.call(null, ...args);
     };
 }
-module.exports.curry = curry;
   

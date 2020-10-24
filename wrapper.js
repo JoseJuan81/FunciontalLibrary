@@ -1,50 +1,21 @@
-const { allAreTrue } = require("./functions/allAreTrue");
-const { every, filter, find, findIndex, forEach, map, reduce, some } = require("./functions/arrayPrototypes");
-const { atLeastOneTrue } = require("./functions/atLeastOneTrue");
-const { commonsItemsBetweenArrays } = require("./functions/commonsItemsBetweenArrays");
-const { compose } = require("./functions/compose");
-const { createPropertyByOtherOne } = require("./functions/createPropertyByOtherOne");
-const { curry } = require("./functions/curry");
-const { debounce } = require("./functions/debounce");
-const { decide } = require("./functions/decide");
-const { equality } = require("./functions/equality");
-const { getPropertysValue } = require("./functions/getPropertysValue");
-const { identity } = require('./functions/identity');
-const { isEmpty } = require("./functions/isEmpty");
-const { isNotEmpty } = require("./functions/isNotEmpty");
-const { mergeObjects } = require("./functions/mergeObjects");
-const { removeItemFromArrayByIndex } = require("./functions/removeItemFromArrayByIndex");
-const { removeItemFromArrayByProp } = require("./functions/removeItemFromArrayByProp");
-const { returnUniqueArraysItems } = require("./functions/returnUniqueArraysItems");
-const { round } = require("./functions/round");
-const { setNewProperty } = require("./functions/setNewProperty");
+export { allAreTrue } from "./functions/allAreTrue";
+export { every, filter, find, findIndex, forEach, map, reduce, some } from "./functions/arrayPrototypes";
+export { atLeastOneTrue } from "./functions/atLeastOneTrue";
+export { commonsItemsBetweenArrays } from "./functions/commonsItemsBetweenArrays";
+export { compose } from "./functions/compose";
+export { createPropertyByOtherOne } from "./functions/createPropertyByOtherOne";
+export { curry } from "./functions/curry";
+export { debounce } from "./functions/debounce";
+export { decide } from "./functions/decide";
+export { equality } from "./functions/equality";
+export { getPropertysValue } from "./functions/getPropertysValue";
+export { identity } from'./functions/identity';
+export { isEmpty } from "./functions/isEmpty";
+export { isNotEmpty } from "./functions/isNotEmpty";
+export { mergeObjects } from "./functions/mergeObjects";
+export { removeItemFromArrayByIndex } from "./functions/removeItemFromArrayByIndex";
+export { removeItemFromArrayByProp } from "./functions/removeItemFromArrayByProp";
+export { returnUniqueArraysItems } from "./functions/returnUniqueArraysItems";
+export { round } from "./functions/round";
+export { setNewProperty } from "./functions/setNewProperty";
 
-module.exports = {
-	allAreTrue,
-	atLeastOneTrue,
-	commonsItemsBetweenArrays,
-	compose,
-	createPropertyByOtherOne: curry(createPropertyByOtherOne),
-	curry,
-	debounce,
-	decide: curry(decide),
-	equality: curry(equality),
-	every: curry(every),
-	filter: curry(filter),
-	find: curry(find),
-	findIndex: curry(findIndex),
-	forEach: curry(forEach),
-	getPropertysValue: curry(getPropertysValue),
-	identity: curry(identity),
-	isEmpty,
-	isNotEmpty,
-	map: curry(map),
-	mergeObjects,
-	reduce: curry(reduce),
-	removeItemFromArrayByIndex: curry(removeItemFromArrayByIndex),
-	removeItemFromArrayByProp: curry(removeItemFromArrayByProp),
-	returnUniqueArraysItems,
-	round: curry(round),
-	setNewProperty: curry(setNewProperty),
-	some: curry(some),
-};

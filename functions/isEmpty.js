@@ -1,4 +1,4 @@
-const isEmpty = (arg) => {
+export const isEmpty = (arg) => {
 	if (Array.isArray(arg)) {
 		return arg.length === 0;
 	}
@@ -10,4 +10,3 @@ const isEmpty = (arg) => {
 	}
 	return !arg;
 }
-module.exports.isEmpty = isEmpty;

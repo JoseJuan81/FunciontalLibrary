@@ -1,4 +1,4 @@
-const returnUniqueArraysItems = (...arrs) => {
+export const returnUniqueArraysItems = (...arrs) => {
 	const res = [].concat(...arrs);
 	const unique = new Set();
 	res.forEach(item => {
@@ -8,4 +8,3 @@ const returnUniqueArraysItems = (...arrs) => {
 	unique.forEach(item => uniqueParsed.push(JSON.parse(item)))
 	return [].concat(uniqueParsed);
 }
-module.exports.returnUniqueArraysItems = returnUniqueArraysItems;

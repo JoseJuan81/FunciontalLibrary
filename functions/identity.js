@@ -1,3 +1,1 @@
-const identity = v => v;
-
-module.exports.identity = identity;
+export const identity = v => v;

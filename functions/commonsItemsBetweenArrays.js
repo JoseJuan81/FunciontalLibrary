@@ -1,11 +1,11 @@
-const { equality } = require('./equality');
-const { find, every } = require('./arrayPrototypes');
-const { curry } = require('./curry');
+import { equality } from './equality';
+import { find, every } from './arrayPrototypes';
+import { curry } from './curry';
 
 const everyCurried = curry(every);
 const equalityCurried = curry(equality);
 
-const commonsItemsBetweenArrays = (prop, collection1, collection2) => {
+export const commonsItemsBetweenArrays = (prop, collection1, collection2) => {
 	const lower = collection1.length <= collection2.length ? collection1 : collection2;
     const bigger = lower.length === collection1.length ? collection2 : collection1;
 	let list = [];
@@ -41,4 +41,3 @@ const commonsItemsBetweenArrays = (prop, collection1, collection2) => {
 	}
 	return list;
 }
-module.exports.commonsItemsBetweenArrays = commonsItemsBetweenArrays;

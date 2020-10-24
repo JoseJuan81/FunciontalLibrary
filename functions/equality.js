@@ -1,5 +1,5 @@
-const { curry } = require('./curry');
-const { getPropertysValue } = require('./getPropertysValue');
+import { curry } from './curry';
+import { getPropertysValue } from './getPropertysValue';
 
 const getProp = curry(getPropertysValue);
 
@@ -8,7 +8,7 @@ const getProp = curry(getPropertysValue);
  * @param {string, number} val2 - valor a comprar cuando se usa un item del tipo objeto
  * @param {object, string, number} item - cuando es un objeto se usa con val2, cuando es string o number se usa solo (val2 === null)
  */
-const equality = (prop1, val2, item) => {
+export const equality = (prop1, val2, item) => {
 	const findPropIn = typeof prop1 === 'string' ? getProp(prop1) : prop1;
 	const val = val2 || getProp;
 	if (typeof item === 'object' && typeof val !== 'function') {
@@ -19,4 +19,3 @@ const equality = (prop1, val2, item) => {
 	}
 	return item === prop1;
 }
-module.exports.equality = equality;
