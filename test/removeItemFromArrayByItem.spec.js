@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { findIndex, removeItemFromArrayByIndex } = require('./../wrapper');
+const { findIndex, removeItemFromArrayByIndex } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "removeItemFromArrayByIndex function: "')
 

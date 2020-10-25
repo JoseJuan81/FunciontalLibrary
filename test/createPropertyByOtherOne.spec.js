@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { createPropertyByOtherOne, compose, map } = require('./../wrapper');
+const { createPropertyByOtherOne, compose, map } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "createPropertyByOtherOne function: "');
 var persons = [

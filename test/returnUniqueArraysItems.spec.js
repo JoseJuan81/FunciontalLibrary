@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { returnUniqueArraysItems } = require('./../wrapper');
+const { returnUniqueArraysItems } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "returnUniqueArraysItems function: "');
 const arr1 = [1, 2, 3, 4, 5];
@@ -45,7 +45,7 @@ var h = "necesitounacadenadetextolargaparaestaprueba".split('');
 var g = "necesitootracadenadetextolargaparaconstrastarlaanterior".split('');
 
 assert.deepEqual(
-	[ 
+	[
 		'n',
 		'e',
 		'c',

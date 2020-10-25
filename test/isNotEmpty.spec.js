@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { isNotEmpty } = require('./../wrapper');
+const { isNotEmpty } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "isNotEmpty function: "')
 

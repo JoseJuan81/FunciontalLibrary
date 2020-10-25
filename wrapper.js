@@ -1,50 +1,39 @@
-const { allAreTrue } = require("./functions/allAreTrue");
-const { every, filter, find, findIndex, forEach, map, reduce, some } = require("./functions/arrayPrototypes");
-const { atLeastOneTrue } = require("./functions/atLeastOneTrue");
-const { commonsItemsBetweenArrays } = require("./functions/commonsItemsBetweenArrays");
-const { compose } = require("./functions/compose");
-const { createPropertyByOtherOne } = require("./functions/createPropertyByOtherOne");
-const { curry } = require("./functions/curry");
-const { debounce } = require("./functions/debounce");
-const { decide } = require("./functions/decide");
-const { equality } = require("./functions/equality");
-const { getPropertysValue } = require("./functions/getPropertysValue");
-const { identity } = require('./functions/identity');
-const { isEmpty } = require("./functions/isEmpty");
-const { isNotEmpty } = require("./functions/isNotEmpty");
-const { mergeObjects } = require("./functions/mergeObjects");
-const { removeItemFromArrayByIndex } = require("./functions/removeItemFromArrayByIndex");
-const { removeItemFromArrayByProp } = require("./functions/removeItemFromArrayByProp");
-const { returnUniqueArraysItems } = require("./functions/returnUniqueArraysItems");
-const { round } = require("./functions/round");
-const { setNewProperty } = require("./functions/setNewProperty");
+export { allAreTrue } from "./functions/allAreTrue";
+export { atLeastOneTrue } from "./functions/atLeastOneTrue";
+export { commonsItemsBetweenArrays } from "./functions/commonsItemsBetweenArrays";
+export { compose } from "./functions/compose";
+export { debounce } from "./functions/debounce";
+export { isEmpty } from "./functions/isEmpty";
+export { isNotEmpty } from "./functions/isNotEmpty";
+export { mergeObjects } from "./functions/mergeObjects";
+export { returnUniqueArraysItems } from "./functions/returnUniqueArraysItems";
 
-module.exports = {
-	allAreTrue,
-	atLeastOneTrue,
-	commonsItemsBetweenArrays,
-	compose,
-	createPropertyByOtherOne: curry(createPropertyByOtherOne),
-	curry,
-	debounce,
-	decide: curry(decide),
-	equality: curry(equality),
-	every: curry(every),
-	filter: curry(filter),
-	find: curry(find),
-	findIndex: curry(findIndex),
-	forEach: curry(forEach),
-	getPropertysValue: curry(getPropertysValue),
-	identity: curry(identity),
-	isEmpty,
-	isNotEmpty,
-	map: curry(map),
-	mergeObjects,
-	reduce: curry(reduce),
-	removeItemFromArrayByIndex: curry(removeItemFromArrayByIndex),
-	removeItemFromArrayByProp: curry(removeItemFromArrayByProp),
-	returnUniqueArraysItems,
-	round: curry(round),
-	setNewProperty: curry(setNewProperty),
-	some: curry(some),
-};
+import createPropertyByOtherOneFn from "./functions/createPropertyByOtherOne";
+import curry from "./functions/curry";
+import decideFn from "./functions/decide";
+import equalityFn from "./functions/equality";
+import { everyFn, filterFn, findFn, findIndexFn, forEachFn, mapFn, reduceFn, someFn } from "./functions/arrayPrototypes";
+import getPropertysValueFn from "./functions/getPropertysValue";
+import identityFn from'./functions/identity';
+import setNewPropertyFn from "./functions/setNewProperty";
+import removeItemFromArrayByIndexFn from "./functions/removeItemFromArrayByIndex";
+import removeItemFromArrayByPropFn from "./functions/removeItemFromArrayByProp";
+import roundFn from "./functions/round";
+
+export const createPropertyByOtherOne = curry(createPropertyByOtherOneFn);
+export const decide = curry(decideFn);
+export const equality = curry(equalityFn);
+export const every = curry(everyFn);
+export const filter = curry(filterFn);
+export const find = curry(findFn);
+export const findIndex = curry(findIndexFn);
+export const forEach = curry(forEachFn);
+export const getPropertysValue = curry(getPropertysValueFn);
+export const identity = curry(identityFn);
+export const map = curry(mapFn);
+export const reduce = curry(reduceFn);
+export const removeItemFromArrayByIndex = curry(removeItemFromArrayByIndexFn);
+export const removeItemFromArrayByProp = curry(removeItemFromArrayByPropFn);
+export const round = curry(roundFn);
+export const setNewProperty = curry(setNewPropertyFn);
+export const some = curry(someFn);

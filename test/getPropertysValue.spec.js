@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { getPropertysValue } = require('./../wrapper');
+const { getPropertysValue } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "getPropertysValue function: "')
 const mother = {

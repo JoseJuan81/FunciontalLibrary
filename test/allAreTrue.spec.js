@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { allAreTrue } = require('./../wrapper');
+const { allAreTrue } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "allAreTtrue function: "')
 const flag1 = true;

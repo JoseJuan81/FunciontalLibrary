@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { identity } = require('./../wrapper');
+const { identity } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en Identity');
 assert.deepEqual(

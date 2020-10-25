@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { compose, setNewProperty, map } = require('./../wrapper');
+const { compose, setNewProperty, map } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "compose function: "')
 var persons = [
@@ -7,14 +7,11 @@ var persons = [
     {id: 5, name: 'JJ'},
     {id: 6, name: 'nene'},
 ];
-const newPersons = map(
-	compose(
-		setNewProperty('flagActive', true),
-		setNewProperty('createdAt', 'fecha de hoy'),
-		setNewProperty('code', ({ id, name }) => (`${name}-${id}`)),
-	),
-	persons,
-);
+const setFlagActive = setNewProperty('flagActive', true);
+const setCreatedAt = setNewProperty('createdAt', 'fecha de hoy');
+const setCode = setNewProperty('code', ({ id, name }) => `${name}-${id}`);
+const addProperties = compose(setFlagActive, setCreatedAt, setCode);
+const newPersons = map(addProperties, persons);
 
 const expected =  [
     { id: 1, name: 'wen', code: 'wen-1', flagActive: true, createdAt: 'fecha de hoy' },

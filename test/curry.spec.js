@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { compose, getPropertysValue, some } = require('./../wrapper');
+const { compose, getPropertysValue, some } = require('./../lib/functionallibrary.umd');
 
 const persons = [
 	{ id: 1, name: 'kaki', age: 33 },
