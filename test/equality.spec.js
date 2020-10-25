@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { equality } = require('./../wrapper');
+const { equality } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "equality function: "')
 let a = 2;

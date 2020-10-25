@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { every, filter, find, findIndex, map, reduce, some } = require('./../wrapper');
+const { every, filter, find, findIndex, map, reduce, some } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "arrayPrototypes function: "')
 const persons = [
@@ -12,7 +12,7 @@ const persons = [
 const personsMap = persons.map(p => {
 	const newP = p;
 	newP.code = `${p.id - p.age}`;
-	return newP; 
+	return newP;
 })
 
 const personsTest = map(p => {

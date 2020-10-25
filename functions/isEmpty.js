@@ -1,3 +1,8 @@
+/**
+ *	isEmpty
+ *	@param { string | object | array | number} arg - variable a evaluar
+ *	@return { boolean }
+ */
 export const isEmpty = (arg) => {
 	if (Array.isArray(arg)) {
 		return arg.length === 0;

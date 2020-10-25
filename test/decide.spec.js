@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { map, decide, setNewProperty, equality, identity, findIndex } = require('./../wrapper');
+const { map, decide, setNewProperty, equality, identity, findIndex } = require('./../lib/functionallibrary.umd');
 
 const list = [
     { id:1, name: 'Pedro' },

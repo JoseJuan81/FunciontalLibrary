@@ -1,3 +1,8 @@
+/**
+ *	returnUniqueArraysItems
+ *	@param  { array } arrs - arreglos con elementos diversos
+ *	@return { array } arreglo con elementos únicos
+ */
 export const returnUniqueArraysItems = (...arrs) => {
 	const res = [].concat(...arrs);
 	const unique = new Set();

@@ -1,4 +1,3 @@
-// import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 
 export default [
@@ -11,7 +10,6 @@ export default [
 			file: 'lib/functionallibrary.umd.js'
 		},
 		plugins: [
-			// commonjs(),
 			babel({
 				exclude: 'node_modules/**'
 			}),

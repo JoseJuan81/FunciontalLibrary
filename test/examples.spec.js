@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { compose, map, setNewProperty } = require('./../wrapper');
+const { compose, map, setNewProperty } = require('./../lib/functionallibrary.umd');
 
 console.log('Prueba en examples');
 const customer = {

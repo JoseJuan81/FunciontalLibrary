@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { mergeObjects } = require('./../wrapper');
+const { mergeObjects } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "mergeObjects function: "')
 

@@ -1,5 +1,5 @@
 const assert = require('assert').strict;
-const { commonsItemsBetweenArrays } = require('./../wrapper');
+const { commonsItemsBetweenArrays } = require('./../lib/functionallibrary.umd');
 
 console.log('Pruebas en "commonsItemsBetweenArrays function: "')
 var a = [
@@ -16,11 +16,11 @@ var b = [
 ];
 var commons = [
 	{id: 1, name: 'wen'},
-    {id: 5, name: 'JJ'},
+	{id: 5, name: 'JJ'},
 ];
 
 assert.deepEqual(
-    commons,
+	commons,
 	commonsItemsBetweenArrays('name', a, b),
     'No son iguales los items comunes',
 );

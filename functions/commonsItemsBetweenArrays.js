@@ -1,20 +1,26 @@
-import { equality } from './equality';
-import { find, every } from './arrayPrototypes';
-import { curry } from './curry';
+import equality from './equality';
+import { findFn, everyFn } from './arrayPrototypes';
+import curry from './curry';
 
-const everyCurried = curry(every);
+const everyCurried = curry(everyFn);
 const equalityCurried = curry(equality);
 
+/**
+ *	commonsItemsBetweenArrays
+ *	@param { string } prop - propiedad a usar para comparar elementos
+ *	@param { array } collection1 - collección 1
+ *	@param { array } collection2 - colección 2
+ *	@return { array }
+ */
 export const commonsItemsBetweenArrays = (prop, collection1, collection2) => {
 	const lower = collection1.length <= collection2.length ? collection1 : collection2;
-    const bigger = lower.length === collection1.length ? collection2 : collection1;
+		const bigger = lower.length === collection1.length ? collection2 : collection1;
 	let list = [];
 	if (prop) {
 		lower.forEach((a) => {
 			const val = a[prop];
 			const equal = equalityCurried(prop, val);
-			console.log('equal', equal);
-			const match = find(equal, bigger);
+			const match = findFn(equal, bigger);
 			if (match) {
 				list = list.concat(match);
 			}
@@ -34,7 +40,7 @@ export const commonsItemsBetweenArrays = (prop, collection1, collection2) => {
 			(allBiggersAreString && allLowersAreString)
 		) {
 			lower.forEach((a) => {
-				const match = bigger.find(b => a === b);
+				const match = findFn(b => a === b, bigger);
 				list = match ? list.concat(match) : list;
 			});
 		}
