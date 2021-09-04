@@ -5,7 +5,7 @@
  *	@return { array } - array con un elemento menos (el que estaba en posición index)
  */
 export default (index, arr) => {
-	const localArr = [...arr]
+	const localArr = [].concat(arr);
 	localArr.splice(index, 1);
-	return [...localArr];
+	return [].concat(localArr);
 };
